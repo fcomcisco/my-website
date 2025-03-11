@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: transparent; /* Make background transparent */
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: transparent; /* Ensure transparency in dark mode as well */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background); /* This will now be transparent */
+  font-family: Arial, Helvetica, sans-serif;
+}
