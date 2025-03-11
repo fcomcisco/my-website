@@ -4,24 +4,26 @@ import { useEffect, useRef, useState } from "react";
 import CELLS from "vanta/dist/vanta.cells.min";
 import * as THREE from "three";
 
+interface VantaEffect {
+  destroy: () => void;
+}
+
 export default function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [vantaEffect, setVantaEffect] = useState<VantaEffect | null>(null);
 
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
-      setVantaEffect(
-        CELLS({
-          el: vantaRef.current,
-          THREE: THREE,
-          // Set both color1 and color2 to white (0xffffff) for a consistent look
-          color1: 0x0,
-          color2: 0x2bf7,
-          backgroundColor: 0x000000, // black background
-          size: 3,
-          speed: 1.5,
-        })
-      );
+      const effect = CELLS({
+        el: vantaRef.current,
+        THREE: THREE,
+        color1: 0x0,
+        color2: 0x2bf7,
+        backgroundColor: 0x000000,
+        size: 3,
+        speed: 1.5,
+      }) as VantaEffect;
+      setVantaEffect(effect);
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
