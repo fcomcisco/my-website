@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
-  // Set default active section to "profile"
+  // Set default active section to "profile" NOT WORKING
   const [activeSection, setActiveSection] = useState("profile");
 
   useEffect(() => {
