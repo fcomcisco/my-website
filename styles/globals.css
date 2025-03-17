@@ -4,7 +4,7 @@
 
 :root {
   --background: transparent; /* Make background transparent */
-  --foreground: #f82e2e;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
