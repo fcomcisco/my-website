@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import VantaBackground from "./VantaBackground";
-const nextconfig = require("../next.config")
+import nextconfig from "../next.config.mjs";
 
 export default function AboutMe() {
     const [firstCompleted, setFirstCompleted] = useState(false);
