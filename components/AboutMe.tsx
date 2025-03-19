@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import VantaBackground from "./VantaBackground";
+const nextconfig = require("../next.config")
 
 export default function AboutMe() {
     const [firstCompleted, setFirstCompleted] = useState(false);
@@ -20,7 +21,7 @@ export default function AboutMe() {
       <div className="mb-6 relative z-10">
         <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-gray-300">
           <Image
-            src="/images/chest.png"
+            src={`${nextconfig.basePath}/images/chest.png`}
             alt="Profile Picture"
             width={160}
             height={160}
