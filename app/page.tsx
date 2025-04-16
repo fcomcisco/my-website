@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 export default function HomePage() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
-      <section id="profile" className="h-screen snap-start">
+      <section id="aboutme" className="h-screen snap-start">
         <AboutMe />
       </section>
       <section id="skills" className="h-screen snap-start">

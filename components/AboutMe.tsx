@@ -7,12 +7,13 @@ import VantaBackground from "./VantaBackground";
 import nextconfig from "../next.config.mjs";
 
 export default function AboutMe() {
-    const [firstCompleted, setFirstCompleted] = useState(false);
+  const [firstCompleted, setFirstCompleted] = useState(false);
 
   return (
     <section
-      id="Aboutme"
-      className="h-screen flex flex-col items-center justify-center relative overflow-hidden"
+      id="profile"
+      // Added px-4 for horizontal padding on small devices
+      className="h-screen flex flex-col items-center justify-center relative overflow-hidden px-4"
     >
       {/* Vanta Background */}
       <VantaBackground />
@@ -31,7 +32,7 @@ export default function AboutMe() {
       </div>
 
       {/* Typed Title */}
-      <h2 className="text-3xl font-bold mb-2 relative z-10">
+      <h2 className="text-3xl font-bold mb-2 relative z-10 text-center">
         {firstCompleted ? (
           "Hi, my name is Francisco Montecinos"
         ) : (
@@ -49,10 +50,12 @@ export default function AboutMe() {
 
       {/* Subtitle/Description */}
       {firstCompleted && (
-        <p className="text-xl text-white relative z-10">
+        <p className="text-xl text-white relative z-10 text-center">
           <ReactTyped
-            strings={["and I am a Software Developer."]}
-            typeSpeed={50}
+            strings={[
+              "I hold a degree in computer science and am passionate about technology and continuous learning. As a full-stack developer with diverse experience, I’ve recently focused on enhancing my Frontend skills to craft engaging, user-friendly experiences. I look forward to applying my technical expertise to innovative projects and embracing new challenges along the way."
+            ]}
+            typeSpeed={20}
             backSpeed={30}
             backDelay={1500}
             loop={false}
@@ -60,7 +63,6 @@ export default function AboutMe() {
           />
         </p>
       )}
-
     </section>
   );
 }

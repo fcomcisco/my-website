@@ -25,7 +25,7 @@ export default function Projects() {
             <div className="relative bg-black/70 p-6 pb-16 rounded-lg shadow-lg hover:shadow-xl transition max-w-lg mx-auto">
               {/* Project Image */}
               <Image
-                src={`${basePath}/images/workingonit.png`}
+                src={`${basePath}/images/tempor.png`}
                 alt="Tempor Project Screenshot"
                 width={900}
                 height={500}
@@ -36,7 +36,7 @@ export default function Projects() {
               <h3 className="text-2xl font-bold text-white mb-2">Tempor</h3>
               {/* Project Description */}
               <p className="text-white">
-                This is a web app designed to post quick jobs. There are two types of
+                This is a MVP for a project, created on my last year of university, this is a web app designed to post quick jobs. There are two types of
                 users: employers and employees. Employers can post jobs, while employees
                 can view these jobs and initiate connections.
               </p>
@@ -57,6 +57,10 @@ export default function Projects() {
                 <span className="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                   Node.js
                 </span>
+                <span className="bg-sky-200 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                  SCRUM
+                </span>
+
               </div>
               {/* "Read More" Link positioned at the bottom-right */}
               <div className="absolute bottom-4 right-4 z-20">
