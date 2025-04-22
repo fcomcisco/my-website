@@ -5,7 +5,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
-// notification
+// notification about 
 function ToastNotice() {
   const [visible, setVisible] = useState(true);
 
@@ -39,7 +39,7 @@ export default function HomePage() {
         <section id="projects" className="h-screen snap-start">
           <Projects />
         </section>
-        <section id="contact" className="h-screen snap-start relative">
+        <section id="contact" className="h-screen snap-start">
           <Contact />
         </section>
       </div>
