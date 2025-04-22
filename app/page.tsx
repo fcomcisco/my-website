@@ -5,7 +5,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
-// Toast notification at top-right
+// notification
 function ToastNotice() {
   const [visible, setVisible] = useState(true);
 

@@ -1,6 +1,6 @@
 // components/Projects.tsx
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import VantaBackground from "./VantaBackground";
@@ -23,7 +23,7 @@ interface Project {
   href: string;
 }
 
-export default function Projects(): JSX.Element {
+export default function Projects() {
   // Ensure correct typing for basePath
   const { basePath } = nextConfig as { basePath: string };
 
@@ -42,7 +42,10 @@ export default function Projects(): JSX.Element {
         { label: "HTML", classes: "bg-[#F7DF1E] text-black" },
         { label: "Firebase Database", classes: "bg-[#FFCA28] text-black" },
         { label: "Node.js", classes: "bg-[#339933] text-white" },
-        { label: "SCRUM", classes: "bg-gradient-to-r from-[#007ACC] to-[#00B4D8] text-white" },
+        {
+          label: "SCRUM",
+          classes: "bg-gradient-to-r from-[#007ACC] to-[#00B4D8] text-white",
+        },
       ],
       href: "/projects/tempor",
     },
@@ -54,11 +57,17 @@ export default function Projects(): JSX.Element {
       description:
         "Master's project script: layers .tiff images, visualizes cells, and compares counts efficiently on older machines.",
       tags: [
-        { label: "Python", classes: "bg-gradient-to-r from-[#3776AB] to-[#FFD43B] text-black" },
+        {
+          label: "Python",
+          classes: "bg-gradient-to-r from-[#3776AB] to-[#FFD43B] text-black",
+        },
         {
           label: "OpenCV",
           classes: "text-white",
-          style: { background: "linear-gradient(90deg, #5CBB5A 0%, #EA4335 50%, #4285F4 100%)" },
+          style: {
+            background:
+              "linear-gradient(90deg, #5CBB5A 0%, #EA4335 50%, #4285F4 100%)",
+          },
         },
       ],
       href: "/projects/retina-scanner",
@@ -69,7 +78,7 @@ export default function Projects(): JSX.Element {
       image: `${basePath}/images/portfolio.png`,
       alt: "Portfolio Screenshot",
       description:
-        "This portfolio site showcasing my work, built with Next.js and Tailwind CSS. Also used to learn and practice Typscript.",
+        "This portfolio site showcasing my work, built with Next.js and Tailwind CSS. Also used to learn and practice TypeScript.",
       tags: [
         { label: "Next.js", classes: "bg-black text-white" },
         { label: "TypeScript", classes: "bg-[#3178C6] text-white" },
@@ -82,7 +91,8 @@ export default function Projects(): JSX.Element {
       title: "Gatlier portfolio",
       image: `${basePath}/images/gatlier.png`,
       alt: "Project Four Screenshot",
-      description: "Designed to provide a clean, responsive, and fast-loading online presence for a model, without relying on frameworks or external libraries. Focused on semantic structure, visual appeal, and cross-device compatibility.",
+      description:
+        "Designed to provide a clean, responsive, and fast-loading online presence for a model, without relying on frameworks or external libraries. Focused on semantic structure, visual appeal, and cross-device compatibility.",
       tags: [
         { label: "Html", classes: "bg-[#F7DF1E] text-black" },
         { label: "CSS", classes: "bg-purple-500 text-white" },
@@ -138,7 +148,9 @@ export default function Projects(): JSX.Element {
                     className="rounded mb-4"
                     unoptimized
                   />
-                  <h3 className="text-2xl font-bold text-white mb-2">{proj.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {proj.title}
+                  </h3>
                   <p className="text-white">{proj.description}</p>
 
                   <div className="flex flex-wrap gap-2 mt-4 justify-center">
